@@ -4,6 +4,7 @@ $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mo
 $base-font-size: 16px;
 $base-font-weight: 400;
 $base-line-height: 1.5;
+$small-font-size:  $base-font-size * 0.875 !default;
 
 $spacing-unit: 30px;
 
@@ -35,6 +36,25 @@ $table-border-color: $border-color-01 !default;
 $link-base-color: #2a7ae2;
 $link-visited-color: #1756a9;
 $link-hover-color: #000000;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// Notice the following mixin uses max-width, in a deprecated, desktop-first
+// approach, whereas media queries used elsewhere now use min-width.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: #{$ratio}rem;
+}
 
 html {
   font-size: $base-font-size;
