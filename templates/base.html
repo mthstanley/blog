@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default(value='en') }}">
 
-<head>
-  <meta charset="utf-8">
-  <title>MyBlog</title>
+	{% include "includes/head.html" %}
 
-	<link rel="stylesheet" href="style.css">
-</head>
+	<body>
 
-<body>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock %}
-    </div>
-  </section>
-</body>
+		<!-- TODO: add header includes -->
+
+		<main clas="page-content" aria-label="Content">
+			<div class="wrapper">
+				{% block content %}
+
+				{% endblock content %}
+			</div>
+		</main>
+
+		<!-- TODO: add footer includes -->
+
+	</body>
 
 </html>

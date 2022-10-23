@@ -1,8 +1,20 @@
 {% extends "base.html" %}
 
+
 {% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
-<p>Click <a href="{{ get_url(path="@/blog/_index.md") }}">here</a> to see my posts.</p>
+	{% set author = load_data(path="data/author.toml") %}
+	<div class="home">
+		<header class="post-header">
+			<div class="author">
+				<div class="author-graphic">
+					<i class="fa fa-code fa-fw"></i>
+					<i class="fa fa-cutlery fa-fw"></i>
+					<i class="fa fa-beer fa-fw"></i>
+					<i class="fa fa-bicycle fa-fw"></i>
+				</div>
+				<h1 class="author-name">{{ author.name }}</h1>
+				<h2 class="author-description">{{ author.description }}</h2>
+			</div>
+		</header>
+	</div>
 {% endblock content %}

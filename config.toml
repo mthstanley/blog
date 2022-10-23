@@ -1,3 +1,6 @@
+title = "Bits and Bytes"
+description = "My blog."
+
 # The URL the site will be built for
 base_url = "https://mtstanley.dev"
 
@@ -14,3 +17,4 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+author_path = "data/author.toml"
