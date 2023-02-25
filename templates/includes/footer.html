@@ -1,0 +1,61 @@
+{% import "macros.html" as macros %}
+{% set author = load_data(path="data/author.toml") %}
+
+<footer class="site-footer">
+
+    <div class="wrapper">
+
+        <h2 class="footer-heading">{{ config.title | escape }}</h2>
+
+        <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1">
+                <ul class="contact-list">
+                    <li>
+                        {% if author.name %}
+                            {{ author.name | escape }}
+                        {% else %}
+                            {{ config.title | escape }}
+                        {% endif %}
+                    </li>
+                    {% if author.email %}
+                        <li><a href="mailto:{{ author.email }}">{{ author.email }}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-2">
+                <ul class="social-media-list">
+                    {% if author.social.github %}
+                        <li>
+                            {{ macros::social_link(social=author.social.github, site="github") }}
+                        </li>
+                    {% endif %}
+
+                    {% if author.social.twitter %}
+                        <li>
+                            {{ macros::social_link(social=author.social.twitter, site="twitter") }}
+                        </li>
+                    {% endif %}
+
+                    {% if author.social.instagram %}
+                        <li>
+                            {{ macros::social_link(social=author.social.instagram, site="instagram") }}
+                        </li>
+                    {% endif %}
+
+                    {% if author.social.linkedin %}
+                        <li>
+                            {{ macros::social_link(social=author.social.linkedin, site="linkedin") }}
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-3">
+                <p>{{ config.description | escape }}</p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>

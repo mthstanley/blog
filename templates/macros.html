@@ -1,0 +1,18 @@
+{% macro social_link(social, site) %}
+    {% if site == 'twitter' %}
+        {% set icon = "icon icon--twitter fa fa-twitter" %}
+    {% elif site == 'linkedin' %}
+        {% set icon = "icon fa fa-linkedin" %}
+    {% elif site == 'github' %}
+        {% set icon = "icon icon--github fa fa-github" %}
+    {% elif site == 'instagram' %}
+        {% set icon = "icon fa fa-instagram" %}
+    {% endif %}
+
+    <a href="{{ social.url }}{{ social.username }}">
+        <i class="{{ icon }}"></i>
+        <span class="username">
+            {{ social.username }}
+        </span>
+    </a>
+{% endmacro social_link %}

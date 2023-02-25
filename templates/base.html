@@ -1,22 +1,23 @@
+{% import "macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default(value='en') }}">
 
-	{% include "includes/head.html" %}
+    {% include "includes/head.html" %}
 
-	<body>
+    <body>
 
-		{% include "includes/header.html" %}
+        {% include "includes/header.html" %}
 
-		<main class="page-content" aria-label="Content">
-			<div class="wrapper">
-				{% block content %}
+        <main class="page-content" aria-label="Content">
+            <div class="wrapper">
+                {% block content %}
 
-				{% endblock content %}
-			</div>
-		</main>
+                {% endblock content %}
+            </div>
+        </main>
 
-		<!-- TODO: add footer includes -->
+        {% include "includes/footer.html" %}
 
-	</body>
+    </body>
 
 </html>
