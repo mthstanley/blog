@@ -16,3 +16,21 @@
         </span>
     </a>
 {% endmacro social_link %}
+
+{% macro date_range(start, end) %}
+
+    {% if start == "present" %}
+        {% set start_formatted = start %}
+    {% else %}
+        {% set start_formatted = start | date(format="%b %m, %Y") %}
+    {% endif %}
+
+    {% if end == "present" %}
+        {% set end_formatted = end %}
+    {% else %}
+        {% set end_formatted = end | date(format="%b %m, %Y") %}
+    {% endif %}
+
+    {{ start_formatted }} - {{ end_formatted }}
+
+{% endmacro date_range %}

@@ -16,7 +16,7 @@
         </label>
 
         <div class="trigger">
-					{% for s in index.subsections %}
+					{% for s in index.subsections | sort %}
 						{% set subsection = get_section(path=s) %}
             {% if subsection.title %}
             <a class="page-link" href="{{ subsection.permalink }}">{{ subsection.title | escape }}</a>
