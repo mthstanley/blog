@@ -1,0 +1,19 @@
+{% extends "section.html" %}
+
+{% block section %}
+    {% set author = load_data(path="data/author.toml") %}
+    {% for project in author.projects %}
+        <h2>
+            <a href="{{ project.website }}">
+                {{ project.name }}
+            </a>
+        </h2>
+        <p>
+            <i class="fa fa-github"></i>
+            <a href="{{ project.source }}">Source</a>
+        </p>
+        <p>
+            {{ project.description }}
+        </p>
+    {% endfor %}
+{% endblock section %}
