@@ -6,7 +6,7 @@ description = """\
     """
 
 # The URL the site will be built for
-base_url = "https://mthstanley.github.io/blog/"
+base_url = "https://mtstanley.dev/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
