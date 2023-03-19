@@ -18,12 +18,30 @@
             </p>
 
             <h3>Education</h3>
-            {% for education in author.educations %}
+            {% for education in author.educations | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse %}
                 <h4><a href="{{ education.website }}">{{ education.institution }}</a></h4>
                 <p>
                     <strong>{{ education.degree }}</strong>
                     <br />
-                    {{ macros::date_range(start=education.start_date, end=education.end_date) }}
+                    {{ macros::date_range(range=education) }}
+                </p>
+                <dl>
+                    <dt>Major</dt>
+                    <dd>{{ education.major }}</dd>
+                    <dt>Minor</dt>
+                    <dd>{{ education.minor }}</dd>
+                    <dt>GPA</dt>
+                    <dd>{{ education.gpa }}</dd>
+                    <dt>Honors</dt>
+                    <dd>{{ education.achievements | join(sep=", ") }}</dd>
+                </dl>
+            {% endfor %}
+            {% for education in author.educations | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse %}
+                <h4><a href="{{ education.website }}">{{ education.institution }}</a></h4>
+                <p>
+                    <strong>{{ education.degree }}</strong>
+                    <br />
+                    {{ macros::date_range(range=education) }}
                 </p>
                 <dl>
                     <dt>Major</dt>
@@ -45,13 +63,30 @@
                 </dl>
             {% endfor %}
 
-            <h3>Exprience</h3>
-            {% for experience in author.experiences %}
+            <h3>Experience</h3>
+            {% for experience in author.experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse %}
                 <h4><strong>{{ experience.position }}</strong></h4>
                 <p>
                     <strong><a href="{{ experience.website }}">{{ experience.company }}</a></strong>
                     <br />
-                    {{ macros::date_range(start=experience.start_date, end=experience.end_date) }}
+                    {{ macros::date_range(range=experience) }}
+                    <ul>
+                        {% for highlight in experience.highlights %}
+                            <li>
+                                <p>
+                                    {{ highlight }}
+                                </p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </p>
+            {% endfor %}
+            {% for experience in author.experiences | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse %}
+                <h4><strong>{{ experience.position }}</strong></h4>
+                <p>
+                    <strong><a href="{{ experience.website }}">{{ experience.company }}</a></strong>
+                    <br />
+                    {{ macros::date_range(range=experience) }}
                     <ul>
                         {% for highlight in experience.highlights %}
                             <li>

@@ -17,18 +17,18 @@
     </a>
 {% endmacro social_link %}
 
-{% macro date_range(start, end) %}
+{% macro date_range(range) %}
 
-    {% if start == "present" %}
-        {% set start_formatted = start %}
+    {% if range.start_date is undefined %}
+        {% set start_formatted = "present" %}
     {% else %}
-        {% set start_formatted = start | date(format="%b %m, %Y") %}
+        {% set start_formatted = range.start_date | date(format="%b %m, %Y") %}
     {% endif %}
 
-    {% if end == "present" %}
-        {% set end_formatted = end %}
+    {% if range.end_date is undefined %}
+        {% set end_formatted = "present" %}
     {% else %}
-        {% set end_formatted = end | date(format="%b %m, %Y") %}
+        {% set end_formatted = range.end_date | date(format="%b %m, %Y") %}
     {% endif %}
 
     {{ start_formatted }} - {{ end_formatted }}
