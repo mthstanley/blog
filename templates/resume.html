@@ -12,7 +12,7 @@
             <p>
                 {{ author.location.address }} | {{ author.location.city }}, {{ author.location.postal_code }}
                 <br />
-                {{ author.phone }} | <a href="mailto:{{ author.email }}">{{ author.email }}</a>
+                <a href="tel:{{ author.phone | replace(from="-", to="") | replace(from="(", to="") | replace(from=")", to="") }}">{{ author.phone }}</a> | <a href="mailto:{{ author.email }}">{{ author.email }}</a>
                 <br />
                 [ <a href="resume.pdf">pdf</a> ]
             </p>
@@ -21,17 +21,15 @@
             {% for education in author.educations | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse %}
                 <h4><a href="{{ education.website }}">{{ education.institution }}</a></h4>
                 <p>
-                    <strong>{{ education.degree }}</strong>
+                    <strong>{{ education.degree }}</strong> in <strong>{{ education.major }}</strong>, <i>{{ education.latin_honors }}</i>
                     <br />
                     {{ macros::date_range(range=education) }}
                 </p>
                 <dl>
-                    <dt>Major</dt>
-                    <dd>{{ education.major }}</dd>
                     <dt>Minor</dt>
                     <dd>{{ education.minor }}</dd>
                     <dt>GPA</dt>
-                    <dd>{{ education.gpa }}</dd>
+                    <dd><i>Major:</i> {{ education.gpa.major }} <i>Overall:</i> {{ education.gpa.overall }}</dd>
                     <dt>Honors</dt>
                     <dd>{{ education.achievements | join(sep=", ") }}</dd>
                 </dl>
@@ -39,17 +37,15 @@
             {% for education in author.educations | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse %}
                 <h4><a href="{{ education.website }}">{{ education.institution }}</a></h4>
                 <p>
-                    <strong>{{ education.degree }}</strong>
+                    <strong>{{ education.degree }}</strong> in <strong>{{ education.major }}</strong>, <i>{{ education.latin_honors }}</i>
                     <br />
                     {{ macros::date_range(range=education) }}
                 </p>
                 <dl>
-                    <dt>Major</dt>
-                    <dd>{{ education.major }}</dd>
                     <dt>Minor</dt>
                     <dd>{{ education.minor }}</dd>
                     <dt>GPA</dt>
-                    <dd>{{ education.gpa }}</dd>
+                    <dd><i>Major:</i> {{ education.gpa.major }} <i>Overall:</i> {{ education.gpa.overall }}</dd>
                     <dt>Honors</dt>
                     <dd>{{ education.achievements | join(sep=", ") }}</dd>
                 </dl>
@@ -65,9 +61,9 @@
 
             <h3>Experience</h3>
             {% for experience in author.experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse %}
-                <h4><strong>{{ experience.position }}</strong></h4>
+                <h4><strong>{{ experience.position }}</strong> ({{ experience.department }})</h4>
                 <p>
-                    <strong><a href="{{ experience.website }}">{{ experience.company }}</a></strong>
+                    <strong><a href="{{ experience.website }}">{{ experience.company.name }}</a></strong>
                     <br />
                     {{ macros::date_range(range=experience) }}
                     <ul>
@@ -82,9 +78,9 @@
                 </p>
             {% endfor %}
             {% for experience in author.experiences | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse %}
-                <h4><strong>{{ experience.position }}</strong></h4>
+                <h4><strong>{{ experience.position }}</strong> ({{ experience.department }})</h4>
                 <p>
-                    <strong><a href="{{ experience.website }}">{{ experience.company }}</a></strong>
+                    <strong><a href="{{ experience.website }}">{{ experience.company.name }}</a></strong>
                     <br />
                     {{ macros::date_range(range=experience) }}
                     <ul>
