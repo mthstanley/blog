@@ -2,8 +2,9 @@ name = "Matthew Stanley"
 email = "stanley.t.matthew@gmail.com"
 description = "Aspiring professional nerd."
 picture = "None"
-phone = "(802) 989-2201"
+phone = "+1 (802) 989-2201"
 resume_pdf = "/assets/resume.pdf"
+website = "https://mtstanley.dev"
 
 [location]
 address = "34 Cardinal Way"
@@ -31,7 +32,7 @@ region = "Vermont"
   url = "https://linkedin.com/in/"
 
 [[experiences]]
-company = "Middlebury College (Department of Computer Science)"
+department = "Department of Computer Science"
 position = "Research Assistant"
 website = "http://www.middlebury.edu/academics/cs"
 start_date = 2015-05-26
@@ -42,9 +43,12 @@ highlights = [
   "Implemented both a native and web-based application in C++ and Javascript  respectively.\n",
   "Using the WebGL API and GLSL, parallelized the compute-intensive image  processing to take advantage of GPGPU allowing for interactive speeds  within a web browser environment.\n"
 ]
+[experiences.company]
+name = "Middlebury College"
+location = "Middlebury, VT"
 
 [[experiences]]
-company = "Middlebury College (Department of Computer Science)"
+department = "Department of Computer Science"
 position = "Teaching Assistant"
 website = "http://www.middlebury.edu/academics/cs"
 start_date = 2014-09-08
@@ -55,9 +59,12 @@ highlights = [
   "Data Structures Spring 2015: Provided both numerical and written feedback on Java programming assignments for a class of  60 students.\n",
   "Computing for the Sciences Fall 2014: Graded a class  of 30 students on both style and correctness of programming  assignment solutions written in Python.\n"
 ]
+[experiences.company]
+name = "Middlebury College"
+location = "Middlebury, VT"
 
 [[experiences]]
-company = "Middlebury College (Department of Chemistry)"
+department = "Department of Chemistry"
 position = "Research Assistant"
 website = "http://www.middlebury.edu/academics/chem"
 start_date = 2012-06-01
@@ -68,9 +75,12 @@ highlights = [
   "Used UV-Vis spectroscopy to test for quality and quantity of protein  produced.\n",
   "Created and presented a poster for the Middlebury College research  symposium.\n"
 ]
+[experiences.company]
+name = "Middlebury College"
+location = "Middlebury, VT"
 
 [[experiences]]
-company = "American Flatbread"
+department = "Back of House"
 position = "Kitchen Manager"
 website = "http://americanflatbread.com/restaurants/middlebury-vt/"
 start_date = 2010-06-01
@@ -80,23 +90,28 @@ highlights = [
   "Design and oversee the creation of new menu items and weekly specials  alongside the head chef.\n",
   "Manage the kitchen staff in the absence of the head chef.\n"
 ]
+[experiences.company]
+name = "American Flatbread"
+location = "Middlebury, VT"
 
 [[educations]]
 institution = "Middlebury College"
 website = "http://www.middlebury.edu"
 major = "Computer Science"
 minor = "Mathematics"
-degree = "Bachelor of the Arts"
+degree = "Bachelor of Arts"
+latin_honors = "summa cum laude"
 start_date = 2012-02-08
 end_date = 2016-02-06
 current = false
-gpa = 3.91
 achievements = [
-  "summa cum laude",
-  "phi beta kappa",
-  "College Scholar 6 semesters"
+  "Phi Beta Kappa",
+  "College Scholar 6 Semesters"
 ]
-course = ""
+location = "Middlebury, VT"
+[educations.gpa]
+major = 3.93
+overall = 3.91
 
 [[skills]]
 name = "Python"
