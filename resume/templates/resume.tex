@@ -1,0 +1,85 @@
+{% import "macros.html" as macros %}
+
+\documentclass[10pt]{resume}
+
+\usepackage{array}
+\usepackage[margin=0.65in]{geometry}
+\usepackage[scaled]{helvet}
+
+\geometry{top=10mm}
+
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+{% raw %}\name{{% endraw %}{{ name }}{% raw %}}{% endraw %}
+\vspace{0.5em}
+{% raw %}\contact{{% endraw %}{{ location.address }}{% raw %}}{{% endraw %}{{ location.city }}{% raw %}}{{% endraw %}{{ location.postal_code }}{% raw %}}{% endraw %}
+{% raw %}{{% endraw %}{{ email }}{% raw %}}{{% endraw %}{{ phone }}{% raw %}}{{% endraw %}{{ website }}{% raw %}}{% endraw %}
+
+\section{Education}
+
+{%- set current_educations = educations | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}
+{% for education in current_educations -%}
+{% if loop.first or current_educations | map(attribute="institution") | nth(n=loop.index - 1) != education.institution -%}
+{% raw %}\locationsubsection{{% endraw %}{{ education.institution }}{% raw %}}{{% endraw %}{{ education.location }}{% raw %}}{% endraw %}
+{%- endif %}
+\textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
+\textbf{Minor:} {{ education.minor }}\\
+\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
+\textbf{Honors:} {{ education.achievements | join(sep=", ") }}
+{%- endfor %}
+
+{% set past_educations = educations | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse -%}
+{% for education in past_educations -%}
+{% if loop.first and current_educations | map(attribute="institution") | last != education.institution or past_educations | map(attribute="institution") | nth(n=loop.index - 1) != education.institution -%}
+{% raw %}\locationsubsection{{% endraw %}{{ education.institution }}{% raw %}}{{% endraw %}{{ education.location }}{% raw %}}{% endraw %}
+{%- endif %}
+\textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
+\textbf{Minor:} {{ education.minor }}\\
+\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
+\textbf{Honors:} {{ education.achievements | join(sep=", ") }}
+{%- endfor %}
+
+\section{Technical Skills}
+
+\begin{tabular}{>{\bfseries}l l}
+{%- for category, grouped_skills in skills | group_by(attribute="category") %}
+{{ category ~ ":" | replace(from="&", to="\&") }} & {{ grouped_skills | map(attribute="name") | join(sep=", ") }} \\
+{%- endfor %}
+\end{tabular}
+
+\section{Experience}
+
+{%- set current_experiences = experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}
+{% for experience in current_experiences %}
+{% if loop.first or current_experiences | map(attribute="company.name") | nth(n=loop.index - 1) != experience.company.name -%}
+{% raw %}\locationsubsection{{% endraw %}{{ experience.company.name }}{% raw %}}{{% endraw %}{{ experience.company.location }}{% raw %}}{% endraw %}
+{%- endif %}
+\expblock
+{% raw %}{{% endraw %}{{ experience.position }}{% raw %} \textnormal{{% endraw %}{{ experience.department }}{% raw %}}}{{% endraw %}{{ macros::date_range(range=experience) }}{% raw %}}{% endraw %}
+{
+{% for highlight in experience.highlights -%}
+    \item {{ highlight }}
+{%- endfor -%}
+}
+{% endfor -%}
+
+{%- set past_experiences = experiences | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse -%}
+{%- for experience in past_experiences %}
+{% if loop.first and current_experiences | map(attribute="company.name") | last != experience.company.name or past_experiences | map(attribute="company.name") | nth(n=loop.index - 1) != experience.company.name -%}
+{% raw %}\locationsubsection{{% endraw %}{{ experience.company.name }}{% raw %}}{{% endraw %}{{ experience.company.location }}{% raw %}}{% endraw %}
+{%- endif %}
+\expblock
+{% raw %}{{% endraw %}{{ experience.position }}{% raw %} \textnormal{{% endraw %}{{ experience.department }}{% raw %}}}{{% endraw %}{{ macros::date_range(range=experience) }}{% raw %}}{% endraw %}
+{
+{% for highlight in experience.highlights -%}
+    \item {{ highlight }}
+{%- endfor -%}
+}
+{%- endfor %}
+
+\end{document}
