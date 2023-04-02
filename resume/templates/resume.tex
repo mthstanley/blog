@@ -20,38 +20,6 @@
 {% raw %}\contact{{% endraw %}{{ location.address | escape_latex }}{% raw %}}{{% endraw %}{{ location.city }}{% raw %}}{{% endraw %}{{ location.postal_code }}{% raw %}}{% endraw %}
 {% raw %}{{% endraw %}{{ email }}{% raw %}}{{% endraw %}{{ phone }}{% raw %}}{{% endraw %}{{ website }}{% raw %}}{% endraw %}
 
-\section{Education}
-
-{%- set current_educations = educations | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}
-{% for education in current_educations -%}
-{% if loop.first or current_educations | map(attribute="institution") | nth(n=loop.index - 1) != education.institution -%}
-{% raw %}\locationsubsection{{% endraw %}{{ education.institution }}{% raw %}}{{% endraw %}{{ education.location }}{% raw %}}{% endraw %}
-{%- endif %}
-\textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
-\textbf{Minor:} {{ education.minor }}\\
-\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
-\textbf{Honors:} {{ education.achievements | join(sep=", ") }}
-{%- endfor %}
-
-{% set past_educations = educations | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse -%}
-{% for education in past_educations -%}
-{% if loop.first and current_educations | map(attribute="institution") | last != education.institution or past_educations | map(attribute="institution") | nth(n=loop.index - 1) != education.institution -%}
-{% raw %}\locationsubsection{{% endraw %}{{ education.institution }}{% raw %}}{{% endraw %}{{ education.location }}{% raw %}}{% endraw %}
-{%- endif %}
-\textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
-\textbf{Minor:} {{ education.minor }}\\
-\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
-\textbf{Honors:} {{ education.achievements | join(sep=", ") }}
-{%- endfor %}
-
-\section{Technical Skills}
-
-\begin{tabular}{>{\bfseries}l l}
-{%- for category, grouped_skills in skills | group_by(attribute="category") %}
-{{ category ~ ":" | escape_latex }} & {{ grouped_skills | map(attribute="name") | join(sep=", ") }} \\
-{%- endfor %}
-\end{tabular}
-
 \section{Experience}
 
 {%- set current_experiences = experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}
@@ -82,5 +50,37 @@
     \item {{ highlight | escape_latex }}
 {% endfor -%}
 }
+{%- endfor %}
+
+\section{Technical Skills}
+
+\begin{tabular}{>{\bfseries}l l}
+{%- for category, grouped_skills in skills | group_by(attribute="category") %}
+{{ category ~ ":" | escape_latex }} & {{ grouped_skills | map(attribute="name") | join(sep=", ") }} \\
+{%- endfor %}
+\end{tabular}
+
+\section{Education}
+
+{%- set current_educations = educations | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}
+{% for education in current_educations -%}
+{% if loop.first or current_educations | map(attribute="institution") | nth(n=loop.index - 1) != education.institution -%}
+{% raw %}\locationsubsection{{% endraw %}{{ education.institution }}{% raw %}}{{% endraw %}{{ education.location }}{% raw %}}{% endraw %}
+{%- endif %}
+\textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
+\textbf{Minor:} {{ education.minor }}\\
+\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
+\textbf{Honors:} {{ education.achievements | join(sep=", ") }}
+{%- endfor %}
+
+{% set past_educations = educations | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse -%}
+{% for education in past_educations -%}
+{% if loop.first and current_educations | map(attribute="institution") | last != education.institution or past_educations | map(attribute="institution") | nth(n=loop.index - 1) != education.institution -%}
+{% raw %}\locationsubsection{{% endraw %}{{ education.institution }}{% raw %}}{{% endraw %}{{ education.location }}{% raw %}}{% endraw %}
+{%- endif %}
+\textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
+\textbf{Minor:} {{ education.minor }}\\
+\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
+\textbf{Honors:} {{ education.achievements | join(sep=", ") }}
 {%- endfor %}
 \end{document}
