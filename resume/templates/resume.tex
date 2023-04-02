@@ -20,6 +20,10 @@
 {% raw %}\contact{{% endraw %}{{ location.address | escape_latex }}{% raw %}}{{% endraw %}{{ location.city }}{% raw %}}{{% endraw %}{{ location.postal_code }}{% raw %}}{% endraw %}
 {% raw %}{{% endraw %}{{ email }}{% raw %}}{{% endraw %}{{ phone }}{% raw %}}{{% endraw %}{{ website }}{% raw %}}{% endraw %}
 
+\section{Summary}
+
+{{ summary | escape_latex }}
+
 \section{Experience}
 
 {%- set current_experiences = experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}

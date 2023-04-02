@@ -1,6 +1,17 @@
 name = "Matthew Stanley"
 email = "stanley.t.matthew@gmail.com"
 description = "Professional nerd."
+
+summary = """\
+I'm a software engineer with a passion for building thoughtful \
+products through high-quality engineering practices, no detail is too small. \
+I'm devoted to finding root causes, answering questions like "How can we do it \
+better?", and being a team multiplier. I love the idea of software engineering \
+as a craft and am constantly searching for just the right balance between \
+idealism and pragmatism. Currently I lead a team of engineers building \
+Wayfair's next-gen streaming ingestion platform at petabyte-scale.\
+"""
+
 picture = "None"
 phone = "+1 (802) 989-2201"
 resume_pdf = "/assets/resume.pdf"
