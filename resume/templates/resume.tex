@@ -17,7 +17,7 @@
 
 {% raw %}\name{{% endraw %}{{ name }}{% raw %}}{% endraw %}
 \vspace{0.5em}
-{% raw %}\contact{{% endraw %}{{ location.address }}{% raw %}}{{% endraw %}{{ location.city }}{% raw %}}{{% endraw %}{{ location.postal_code }}{% raw %}}{% endraw %}
+{% raw %}\contact{{% endraw %}{{ location.address | escape_latex }}{% raw %}}{{% endraw %}{{ location.city }}{% raw %}}{{% endraw %}{{ location.postal_code }}{% raw %}}{% endraw %}
 {% raw %}{{% endraw %}{{ email }}{% raw %}}{{% endraw %}{{ phone }}{% raw %}}{{% endraw %}{{ website }}{% raw %}}{% endraw %}
 
 \section{Education}
@@ -48,7 +48,7 @@
 
 \begin{tabular}{>{\bfseries}l l}
 {%- for category, grouped_skills in skills | group_by(attribute="category") %}
-{{ category ~ ":" | replace(from="&", to="\&") }} & {{ grouped_skills | map(attribute="name") | join(sep=", ") }} \\
+{{ category ~ ":" | escape_latex }} & {{ grouped_skills | map(attribute="name") | join(sep=", ") }} \\
 {%- endfor %}
 \end{tabular}
 
@@ -56,6 +56,7 @@
 
 {%- set current_experiences = experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}
 {% for experience in current_experiences %}
+{%- if experience.display is not containing("pdf") -%}{%- continue -%}{%- endif -%}
 {% if loop.first or current_experiences | map(attribute="company.name") | nth(n=loop.index - 1) != experience.company.name -%}
 {% raw %}\locationsubsection{{% endraw %}{{ experience.company.name }}{% raw %}}{{% endraw %}{{ experience.company.location }}{% raw %}}{% endraw %}
 {%- endif %}
@@ -63,13 +64,14 @@
 {% raw %}{{% endraw %}{{ experience.position }}{% raw %} \textnormal{{% endraw %}{{ experience.department }}{% raw %}}}{{% endraw %}{{ macros::date_range(range=experience) }}{% raw %}}{% endraw %}
 {
 {% for highlight in experience.highlights -%}
-    \item {{ highlight }}
-{%- endfor -%}
-}
+    \item {{ highlight | escape_latex }}
 {% endfor -%}
+}
+{%- endfor -%}
 
 {%- set past_experiences = experiences | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse -%}
 {%- for experience in past_experiences %}
+{%- if experience.display is not containing("pdf") -%}{%- continue -%}{%- endif -%}
 {% if loop.first and current_experiences | map(attribute="company.name") | last != experience.company.name or past_experiences | map(attribute="company.name") | nth(n=loop.index - 1) != experience.company.name -%}
 {% raw %}\locationsubsection{{% endraw %}{{ experience.company.name }}{% raw %}}{{% endraw %}{{ experience.company.location }}{% raw %}}{% endraw %}
 {%- endif %}
@@ -77,9 +79,8 @@
 {% raw %}{{% endraw %}{{ experience.position }}{% raw %} \textnormal{{% endraw %}{{ experience.department }}{% raw %}}}{{% endraw %}{{ macros::date_range(range=experience) }}{% raw %}}{% endraw %}
 {
 {% for highlight in experience.highlights -%}
-    \item {{ highlight }}
-{%- endfor -%}
+    \item {{ highlight | escape_latex }}
+{% endfor -%}
 }
 {%- endfor %}
-
 \end{document}

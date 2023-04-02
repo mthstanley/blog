@@ -1,20 +1,19 @@
 name = "Matthew Stanley"
 email = "stanley.t.matthew@gmail.com"
-description = "Aspiring professional nerd."
+description = "Professional nerd."
 picture = "None"
 phone = "+1 (802) 989-2201"
 resume_pdf = "/assets/resume.pdf"
 website = "https://mtstanley.dev"
 
 [location]
-address = "34 Cardinal Way"
-postal_code = "VT 05753"
-city = "Middlebury"
+address = "89 Strathmore Road, Apt. #4"
+postal_code = "MA 02135"
+city = "Boston"
 country_code = "US"
-region = "Vermont"
+region = "Massachusetts"
 
 [social]
-
   [social.twitter]
   username = "mstanleyth"
   url = "https://twitter.com/"
@@ -32,12 +31,55 @@ region = "Vermont"
   url = "https://linkedin.com/in/"
 
 [[experiences]]
+department = "Data and Machine Learning Platforms"
+position = "Senior Software Engineer"
+website = "https://www.wayfair.com"
+start_date = 2018-04-09
+current = true
+display = ["web", "pdf"]
+highlights = [
+  """\
+  Drastically improved performance and life-expectancy of Wayfair's \
+  on-premise HDFS cluster by implementing a process for the compaction of small \
+  files across the cluster, realizing a 98% reduction in the number of files.\
+  """,
+
+  """\
+  Designed and implemented configuration-based ETL platform to generate \
+  foundational data assets at scale (using HDFS, Hive, Presto, Parquet, Spark \
+  and Airflow) for Wayfair's Machine Learning and Analytics platforms.\
+  """,
+
+  """\
+  Led the engineering effort of multiple high-impact migrations for \
+  Wayfair's high-throughput event ingestion platform: from single to \
+  multi-datacenter architecture, from running on on-premise infrastructure \
+  through hybrid cloud to fully on-boarded onto Google Cloud Platform.\
+  """,
+
+  """\
+  After on-boarding my team's systems to GCP I drove cost saving \
+  initiatives across our platform leading to almost $9MM in reduced spending.\
+  """,
+
+  """\
+  Lead a team of 3 engineers working on the control plane systems for \
+  Wayfair's next generation data ingestion platform.\
+  """
+
+]
+[experiences.company]
+name = "Wayfair"
+location = "Boston, MA"
+
+[[experiences]]
 department = "Department of Computer Science"
 position = "Research Assistant"
 website = "http://www.middlebury.edu/academics/cs"
 start_date = 2015-05-26
 end_date = 2015-07-31
 current = false
+display = ["web"]
 highlights = [
   """\
   Designed and developed two graphical applications to compute and \
@@ -70,6 +112,7 @@ website = "http://www.middlebury.edu/academics/cs"
 start_date = 2014-09-08
 end_date = 2015-12-14
 current = false
+display = ["web"]
 highlights = [
   """\
   Computing for the Sciences Fall 2015: Graded Python  programming assignments \
@@ -100,6 +143,7 @@ website = "http://www.middlebury.edu/academics/chem"
 start_date = 2012-06-01
 end_date = 2012-08-31
 current = false
+display = ["web"]
 highlights = [
   """\
   Synthesized the protein methionine aminopeptidase (METAP 2) to be  utilized \
@@ -126,7 +170,9 @@ department = "Back of House"
 position = "Kitchen Manager"
 website = "http://americanflatbread.com/restaurants/middlebury-vt/"
 start_date = 2010-06-01
-current = true
+end_date = 2018-03-01
+current = false
+display = ["web"]
 highlights = [
   """\
   Trained on all positions in the restaurant, both front and back of house. \
@@ -158,6 +204,7 @@ latin_honors = "summa cum laude"
 start_date = 2012-02-08
 end_date = 2016-02-06
 current = false
+display = ["web"]
 achievements = [
   "Phi Beta Kappa",
   "College Scholar 6 Semesters"
