@@ -238,61 +238,61 @@ keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "C"
+name = "Bash"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "Javascript"
+name = "JavaScript"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "HTML"
+name = "Go"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "CSS"
+name = "PHP"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "Backbone.js"
+name = "Sprint Boot"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "Node.js"
+name = "React"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "WebGL"
+name = "Kafka"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "Flask"
+name = "Spark"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "Django"
+name = "Flink"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "jQuery"
+name = "Airflow"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
@@ -304,7 +304,7 @@ keywords = ""
 category = "Operating Systems"
 
 [[skills]]
-name = "Mac OS X"
+name = "macOS"
 level = "intermediate"
 keywords = ""
 category = "Operating Systems"
@@ -316,22 +316,106 @@ keywords = ""
 category = "Operating Systems"
 
 [[skills]]
-name = "git"
+name = "Git"
 level = "intermediate"
 keywords = ""
 category = "Dev Tools"
 
 [[skills]]
-name = "gcc"
+name = "Maven"
 level = "intermediate"
 keywords = ""
 category = "Dev Tools"
 
 [[skills]]
-name = "make"
+name = "Make"
 level = "intermediate"
 keywords = ""
 category = "Dev Tools"
+
+[[skills]]
+name = "Buildkite"
+level = "intermediate"
+keywords = ""
+category = "Dev Tools"
+
+[[skills]]
+name = "InfluxDB"
+level = "intermediate"
+keywords = ""
+category = "Dev Tools"
+
+[[skills]]
+name = "Datadog"
+level = "intermediate"
+keywords = ""
+category = "Dev Tools"
+
+[[skills]]
+name = "Grafana"
+level = "intermediate"
+keywords = ""
+category = "Dev Tools"
+
+[[skills]]
+name = "Kibana"
+level = "intermediate"
+keywords = ""
+category = "Dev Tools"
+
+[[skills]]
+name = "Avro"
+level = "intermediate"
+keywords = ""
+category = "Data Formats"
+
+[[skills]]
+name = "Parquet"
+level = "intermediate"
+keywords = ""
+category = "Data Formats"
+
+[[skills]]
+name = "Google Cloud Platform"
+level = "intermediate"
+keywords = ""
+category = "Cloud Platforms"
+
+[[skills]]
+name = "PostgreSQL"
+level = "intermediate"
+keywords = ""
+category = "Databases"
+
+[[skills]]
+name = "MariaDB"
+level = "intermediate"
+keywords = ""
+category = "Databases"
+
+[[skills]]
+name = "Aerospike"
+level = "intermediate"
+keywords = ""
+category = "Databases"
+
+[[skills]]
+name = "Hive"
+level = "intermediate"
+keywords = ""
+category = "Databases"
+
+[[skills]]
+name = "Presto"
+level = "intermediate"
+keywords = ""
+category = "Databases"
+
+[[skills]]
+name = "BigQuery"
+level = "intermediate"
+keywords = ""
+category = "Databases"
 
 [[projects]]
 name = "Twender"

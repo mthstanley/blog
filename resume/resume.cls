@@ -5,7 +5,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{scrextend}
 
-\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.8\baselineskip}
+%\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.8\baselineskip}
 
 \titleformat{\section}          % Customize the /section command
     {
