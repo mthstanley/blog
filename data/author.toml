@@ -1,20 +1,17 @@
 name = "Matthew Stanley"
 email = "stanley.t.matthew@gmail.com"
-description = "Professional nerd."
+description = "Senior Software Engineer"
 
 summary = """\
-I'm a software engineer with a passion for building thoughtful \
-products through high-quality engineering practices, no detail is too small. \
-I'm devoted to finding root causes, answering questions like "How can we do it \
-better?", and being a team multiplier. I love the idea of software engineering \
-as a craft and am constantly searching for just the right balance between \
-idealism and pragmatism. Currently I lead a team of engineers building \
-Wayfair's next-gen streaming ingestion platform at petabyte-scale.\
+Software Engineer with 5 years experience designing, building \
+and maintaining data platforms for event driven systems, specializing in (but \
+not limited to) JVM-based programming languages. Domain expert in customer \
+tracking for web-based applications. Currently leading a team of 4 building the \
+next generation event streaming platform at Wayfair. Passionate about developer \
+experience and velocity.\
 """
 
-picture = "None"
 phone = "+1 (802) 989-2201"
-resume_pdf = "/assets/resume.pdf"
 website = "https://mtstanley.dev"
 
 [location]
@@ -38,7 +35,7 @@ region = "Massachusetts"
   url = "https://instagram.com/"
 
   [social.linkedin]
-  username = "matthew-stanley-90b5a8103"
+  username = "mtstanley"
   url = "https://linkedin.com/in/"
 
 [[experiences]]
@@ -50,32 +47,36 @@ current = true
 display = ["web", "pdf"]
 highlights = [
   """\
-  Drastically improved performance and life-expectancy of Wayfair's \
-  on-premise HDFS cluster by implementing a process for the compaction of small \
-  files across the cluster, realizing a 98% reduction in the number of files.\
+  Automated compaction of small files across Wayfair’s on-premise HDFS \
+  cluster, optimizing file sizes to the cluster’s block size, realizing a 98% \
+  reduction in file count and drastically improving the cluster’s performance \
+  and life-expectancy.\
   """,
 
   """\
-  Designed and implemented configuration-based ETL platform to generate \
+  Designed and implemented configuration-based ETL framework to generate \
   foundational data assets at scale (using HDFS, Hive, Presto, Parquet, Spark \
-  and Airflow) for Wayfair's Machine Learning and Analytics platforms.\
+  and Airflow) for Wayfair’s Machine Learning and Analytics platforms.\
   """,
 
   """\
   Led the engineering effort of multiple high-impact migrations for \
-  Wayfair's high-throughput event ingestion platform: from single to \
-  multi-datacenter architecture, from running on on-premise infrastructure \
+  Wayfair’s high-throughput event ingestion platform: from single to \
+  multi-datacenter architecture, from operating on on-premise infrastructure \
   through hybrid cloud to fully on-boarded onto Google Cloud Platform.\
   """,
 
   """\
-  After on-boarding my team's systems to GCP I drove cost saving \
-  initiatives across our platform leading to almost $9MM in reduced spending.\
+  Drove multiple cost saving initiatives across my team’s platforms, \
+  including: optimizing automated Cloud Storage policies, tuning Dataproc \
+  cluster usage and consolidating duplicative processes, leading to $10MM+ \
+  annualized in reduced spending.\
   """,
 
   """\
-  Lead a team of 3 engineers working on the control plane systems for \
-  Wayfair's next generation data ingestion platform.\
+  Lead an agile team of 4 engineers working on the control plane systems \
+  for Wayfair’s next generation streaming event ingestion and sourcing \
+  platform.\
   """
 
 ]
@@ -215,7 +216,6 @@ latin_honors = "summa cum laude"
 start_date = 2012-02-08
 end_date = 2016-02-06
 current = false
-display = ["web"]
 achievements = [
   "Phi Beta Kappa",
   "College Scholar 6 Semesters"
@@ -250,13 +250,13 @@ keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "Go"
+name = "TypeScript"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "PHP"
+name = "Go"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
@@ -269,12 +269,6 @@ category = "Libraries & Frameworks"
 
 [[skills]]
 name = "React"
-level = "intermediate"
-keywords = ""
-category = "Libraries & Frameworks"
-
-[[skills]]
-name = "Kafka"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
@@ -319,61 +313,43 @@ category = "Operating Systems"
 name = "Git"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
 name = "Maven"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
-
-[[skills]]
-name = "Make"
-level = "intermediate"
-keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
 name = "Buildkite"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
 name = "InfluxDB"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
 name = "Datadog"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
 name = "Grafana"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
 name = "Kibana"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
-
-[[skills]]
-name = "Avro"
-level = "intermediate"
-keywords = ""
-category = "Data Formats"
-
-[[skills]]
-name = "Parquet"
-level = "intermediate"
-keywords = ""
-category = "Data Formats"
+category = "Developer Tooling"
 
 [[skills]]
 name = "Google Cloud Platform"
@@ -382,40 +358,46 @@ keywords = ""
 category = "Cloud Platforms"
 
 [[skills]]
+name = "Avro"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "Parquet"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
 name = "PostgreSQL"
 level = "intermediate"
 keywords = ""
-category = "Databases"
-
-[[skills]]
-name = "MariaDB"
-level = "intermediate"
-keywords = ""
-category = "Databases"
+category = "Data Storage"
 
 [[skills]]
 name = "Aerospike"
 level = "intermediate"
 keywords = ""
-category = "Databases"
-
-[[skills]]
-name = "Hive"
-level = "intermediate"
-keywords = ""
-category = "Databases"
-
-[[skills]]
-name = "Presto"
-level = "intermediate"
-keywords = ""
-category = "Databases"
+category = "Data Storage"
 
 [[skills]]
 name = "BigQuery"
 level = "intermediate"
 keywords = ""
-category = "Databases"
+category = "Data Storage"
+
+[[skills]]
+name = "GCS"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "Kafka"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
 
 [[projects]]
 name = "Twender"

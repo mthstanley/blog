@@ -45,10 +45,12 @@
     \centerline{\Huge{#1}}
 }
 
-\newcommand{\contact}[6]{
-    \centerline{#1 {\large\textperiodcentered} #2 {\large\textperiodcentered} #3 {\large}}
+\newcommand{\contact}[8]{
+    \centerline{#1 | #2 | #3}
 
-    \centerline{{\Large} #4 \ {\Large} #5 \ {\Large} #6}
+    \centerline{#4 | #5 | #6}
+
+    \centerline{#7 | #8}
 }
 
 \newcommand{\expitems}[3]{

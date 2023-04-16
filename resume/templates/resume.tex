@@ -19,8 +19,9 @@
 \vspace{0.5em}
 {% raw %}\contact{{% endraw %}{{ location.address | escape_latex }}{% raw %}}{{% endraw %}{{ location.city }}{% raw %}}{{% endraw %}{{ location.postal_code }}{% raw %}}{% endraw %}
 {% raw %}{{% endraw %}{{ email }}{% raw %}}{{% endraw %}{{ phone }}{% raw %}}{{% endraw %}{{ website }}{% raw %}}{% endraw %}
+{% raw %}{{% endraw %}{{ social.linkedin.url ~ social.linkedin.username }}{% raw %}}{{% endraw %}{{ social.github.url ~ social.github.username }}{% raw %}}{% endraw %}
 
-\section{Summary}
+{% raw %}\section{{% endraw %}{{ description }}{% raw %}}{% endraw %}
 
 {{ summary | escape_latex }}
 
@@ -73,7 +74,7 @@
 {%- endif %}
 \textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
 \textbf{Minor:} {{ education.minor }}\\
-\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
+\textbf{GPA:} \textit{Major:} {{ education.gpa.major }}/4.0 \textit{Overall:} {{education.gpa.overall}}/4.0\\
 \textbf{Honors:} {{ education.achievements | join(sep=", ") }}
 {%- endfor %}
 
@@ -84,7 +85,7 @@
 {%- endif %}
 \textbf{Major:} {{ education.degree }} in {{ education.major }}, {% raw %}\textit{{% endraw %}{{ education.latin_honors}}{% raw %}}{% endraw %} \hfill {{ macros::date_range(range=education) }}\\
 \textbf{Minor:} {{ education.minor }}\\
-\textbf{GPA:} \textit{Major:} {{ education.gpa.major }} \textit{Overall:} {{education.gpa.overall}}\\
+\textbf{GPA:} \textit{Major:} {{ education.gpa.major }}/4.0 \textit{Overall:} {{education.gpa.overall}}/4.0\\
 \textbf{Honors:} {{ education.achievements | join(sep=", ") }}
 {%- endfor %}
 \end{document}
