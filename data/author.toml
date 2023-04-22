@@ -68,7 +68,7 @@ highlights = [
 
   """\
   Drove multiple cost saving initiatives across my team's platforms, \
-  including: optimizing automated Cloud Storage policies, tuning Dataproc \
+  including: optimizing automated Cloud Storage policies, tuning Google Dataproc \
   cluster usage and consolidating duplicative processes, leading to $10MM+ \
   annualized in reduced spending.\
   """,
@@ -382,13 +382,13 @@ keywords = ""
 category = "Data Storage"
 
 [[skills]]
-name = "BigQuery"
+name = "Google BigQuery"
 level = "intermediate"
 keywords = ""
 category = "Data Storage"
 
 [[skills]]
-name = "GCS"
+name = "Google Cloud Storage"
 level = "intermediate"
 keywords = ""
 category = "Data Storage"
