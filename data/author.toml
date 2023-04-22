@@ -47,27 +47,27 @@ current = true
 display = ["web", "pdf"]
 highlights = [
   """\
-  Automated compaction of small files across Wayfair’s on-premise HDFS \
-  cluster, optimizing file sizes to the cluster’s block size, realizing a 98% \
-  reduction in file count and drastically improving the cluster’s performance \
+  Automated compaction of small files across Wayfair's on-premise HDFS \
+  cluster, optimizing file sizes to the cluster's block size, realizing a 98% \
+  reduction in file count and drastically improving the cluster's performance \
   and life-expectancy.\
   """,
 
   """\
   Designed and implemented configuration-based ETL framework to generate \
   foundational data assets at scale (using HDFS, Hive, Presto, Parquet, Spark \
-  and Airflow) for Wayfair’s Machine Learning and Analytics platforms.\
+  and Airflow) for Wayfair's Machine Learning and Analytics platforms.\
   """,
 
   """\
   Led the engineering effort of multiple high-impact migrations for \
-  Wayfair’s high-throughput event ingestion platform: from single to \
+  Wayfair's high-throughput event ingestion platform: from single to \
   multi-datacenter architecture, from operating on on-premise infrastructure \
   through hybrid cloud to fully on-boarded onto Google Cloud Platform.\
   """,
 
   """\
-  Drove multiple cost saving initiatives across my team’s platforms, \
+  Drove multiple cost saving initiatives across my team's platforms, \
   including: optimizing automated Cloud Storage policies, tuning Dataproc \
   cluster usage and consolidating duplicative processes, leading to $10MM+ \
   annualized in reduced spending.\
@@ -75,7 +75,7 @@ highlights = [
 
   """\
   Lead an agile team of 4 engineers working on the control plane systems \
-  for Wayfair’s next generation streaming event ingestion and sourcing \
+  for Wayfair's next generation streaming event ingestion and sourcing \
   platform.\
   """
 
