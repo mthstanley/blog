@@ -29,7 +29,7 @@
                     <dt>Minor</dt>
                     <dd>{{ education.minor }}</dd>
                     <dt>GPA</dt>
-                    <dd><i>Major:</i> {{ education.gpa.major }} <i>Overall:</i> {{ education.gpa.overall }}</dd>
+                    <dd><i>Major:</i> {{ education.gpa.major }}/4.0 <i>Overall:</i> {{ education.gpa.overall }}/4.0</dd>
                     <dt>Honors</dt>
                     <dd>{{ education.achievements | join(sep=", ") }}</dd>
                 </dl>
@@ -45,7 +45,7 @@
                     <dt>Minor</dt>
                     <dd>{{ education.minor }}</dd>
                     <dt>GPA</dt>
-                    <dd><i>Major:</i> {{ education.gpa.major }} <i>Overall:</i> {{ education.gpa.overall }}</dd>
+                    <dd><i>Major:</i> {{ education.gpa.major }}/4.0 <i>Overall:</i> {{ education.gpa.overall }}/4.0</dd>
                     <dt>Honors</dt>
                     <dd>{{ education.achievements | join(sep=", ") }}</dd>
                 </dl>
@@ -61,6 +61,8 @@
 
             <h3>Experience</h3>
             {% for experience in author.experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse %}
+                {% if experience.display is not containing("web") %}{% continue %}{% endif %}
+
                 <h4><strong>{{ experience.position }}</strong> ({{ experience.department }})</h4>
                 <p>
                     <strong><a href="{{ experience.website }}">{{ experience.company.name }}</a></strong>
@@ -78,6 +80,8 @@
                 </p>
             {% endfor %}
             {% for experience in author.experiences | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse %}
+                {% if experience.display is not containing("web") %}{% continue %}{% endif %}
+
                 <h4><strong>{{ experience.position }}</strong> ({{ experience.department }})</h4>
                 <p>
                     <strong><a href="{{ experience.website }}">{{ experience.company.name }}</a></strong>

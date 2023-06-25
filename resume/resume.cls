@@ -5,7 +5,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{scrextend}
 
-\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.8\baselineskip}
+%\titlespacing*{\section}{0pt}{0.8\baselineskip}{0.8\baselineskip}
 
 \titleformat{\section}          % Customize the /section command
     {
@@ -45,10 +45,12 @@
     \centerline{\Huge{#1}}
 }
 
-\newcommand{\contact}[6]{
-    \centerline{#1 {\large\textperiodcentered} #2 {\large\textperiodcentered} #3 {\large}}
+\newcommand{\contact}[8]{
+    \centerline{#1 | #2 | #3}
 
-    \centerline{{\Large} #4 \ {\Large} #5 \ {\Large} #6}
+    \centerline{#4 | #5 | #6}
+
+    \centerline{#7 | #8}
 }
 
 \newcommand{\expitems}[3]{

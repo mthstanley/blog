@@ -1,20 +1,27 @@
 name = "Matthew Stanley"
 email = "stanley.t.matthew@gmail.com"
-description = "Aspiring professional nerd."
-picture = "None"
+description = "Senior Software Engineer"
+
+summary = """\
+Software Engineer with 5 years experience designing, building \
+and maintaining data platforms for event driven systems, specializing in (but \
+not limited to) JVM-based programming languages. Domain expert in customer \
+tracking for web-based applications. Currently leading a team of 4 building the \
+next generation event streaming platform at Wayfair. Passionate about developer \
+experience and velocity.\
+"""
+
 phone = "+1 (802) 989-2201"
-resume_pdf = "/assets/resume.pdf"
 website = "https://mtstanley.dev"
 
 [location]
-address = "34 Cardinal Way"
-postal_code = "VT 05753"
-city = "Middlebury"
+address = "89 Strathmore Road, Apt. #4"
+postal_code = "MA 02135"
+city = "Boston"
 country_code = "US"
-region = "Vermont"
+region = "Massachusetts"
 
 [social]
-
   [social.twitter]
   username = "mstanleyth"
   url = "https://twitter.com/"
@@ -28,8 +35,54 @@ region = "Vermont"
   url = "https://instagram.com/"
 
   [social.linkedin]
-  username = "matthew-stanley-90b5a8103"
+  username = "mtstanley"
   url = "https://linkedin.com/in/"
+
+[[experiences]]
+department = "Data and Machine Learning Platforms"
+position = "Staff Software Engineer"
+website = "https://www.wayfair.com"
+start_date = 2018-04-09
+current = true
+display = ["web", "pdf"]
+highlights = [
+  """\
+  Automated compaction of small files across Wayfair's on-premise HDFS \
+  cluster, optimizing file sizes to the cluster's block size, realizing a 98% \
+  reduction in file count and drastically improving the cluster's performance \
+  and life-expectancy.\
+  """,
+
+  """\
+  Designed and implemented configuration-based ETL framework to generate \
+  foundational data assets at scale (using HDFS, Hive, Presto, Parquet, Spark \
+  and Airflow) for Wayfair's Machine Learning and Analytics platforms.\
+  """,
+
+  """\
+  Led the engineering effort of multiple high-impact migrations for \
+  Wayfair's high-throughput event ingestion platform: from single to \
+  multi-datacenter architecture, from operating on on-premise infrastructure \
+  through hybrid cloud to fully on-boarded onto Google Cloud Platform.\
+  """,
+
+  """\
+  Drove multiple cost saving initiatives across my team's platforms, \
+  including: optimizing automated Cloud Storage policies, tuning Google Dataproc \
+  cluster usage and consolidating duplicative processes, leading to $10MM+ \
+  annualized in reduced spending.\
+  """,
+
+  """\
+  Lead an agile team of 4 engineers working on the control plane systems \
+  for Wayfair's next generation streaming event ingestion and sourcing \
+  platform.\
+  """
+
+]
+[experiences.company]
+name = "Wayfair"
+location = "Boston, MA"
 
 [[experiences]]
 department = "Department of Computer Science"
@@ -38,10 +91,27 @@ website = "http://www.middlebury.edu/academics/cs"
 start_date = 2015-05-26
 end_date = 2015-07-31
 current = false
+display = ["web"]
 highlights = [
-  "Designed and developed two graphical applications to compute and visualize  a selection of matching costs for stereo image pairs. These applications  also allow the user to manipulate the images including: omnidirectional  movement and horizontal/vertical image warping around an anchor point.\n",
-  "Implemented both a native and web-based application in C++ and Javascript  respectively.\n",
-  "Using the WebGL API and GLSL, parallelized the compute-intensive image  processing to take advantage of GPGPU allowing for interactive speeds  within a web browser environment.\n"
+  """\
+  Designed and developed two graphical applications to compute and \
+  visualize  a selection of matching costs for stereo image pairs. These \
+  applications  also allow the user to manipulate the images including: \
+  omnidirectional  movement and horizontal/vertical image warping around an \
+  anchor point.\
+  """,
+
+  """\
+  Implemented both a native and web-based application in C++ and Javascript \
+  respectively.\
+  """,
+
+  """\
+  Using the WebGL API and GLSL, parallelized the compute-intensive image \
+  processing to take advantage of GPGPU allowing for interactive speeds  within \
+  a web browser environment.\
+  """
+
 ]
 [experiences.company]
 name = "Middlebury College"
@@ -54,10 +124,25 @@ website = "http://www.middlebury.edu/academics/cs"
 start_date = 2014-09-08
 end_date = 2015-12-14
 current = false
+display = ["web"]
 highlights = [
-  "Computing for the Sciences Fall 2015: Graded Python  programming assignments for a class of 60 students, along with  providing one-on-one mentoring in a lab class of 30 students.\n",
-  "Data Structures Spring 2015: Provided both numerical and written feedback on Java programming assignments for a class of  60 students.\n",
-  "Computing for the Sciences Fall 2014: Graded a class  of 30 students on both style and correctness of programming  assignment solutions written in Python.\n"
+  """\
+  Computing for the Sciences Fall 2015: Graded Python  programming assignments \
+  for a class of 60 students, along with  providing one-on-one mentoring in a \
+  lab class of 30 students.\
+  """,
+
+  """\
+  Data Structures Spring 2015: Provided both numerical and written feedback on \
+  Java programming assignments for a class of  60 students.\
+  """,
+
+  """\
+  Computing for the Sciences Fall 2014: Graded a class  of 30 students on both \
+  style and correctness of programming  assignment solutions written in \
+  Python.\
+  """
+
 ]
 [experiences.company]
 name = "Middlebury College"
@@ -70,10 +155,23 @@ website = "http://www.middlebury.edu/academics/chem"
 start_date = 2012-06-01
 end_date = 2012-08-31
 current = false
+display = ["web"]
 highlights = [
-  "Synthesized the protein methionine aminopeptidase (METAP 2) to be  utilized in researching the enzyme’s role in angiogenesis.\n",
-  "Used UV-Vis spectroscopy to test for quality and quantity of protein  produced.\n",
-  "Created and presented a poster for the Middlebury College research  symposium.\n"
+  """\
+  Synthesized the protein methionine aminopeptidase (METAP 2) to be  utilized \
+  in researching the enzyme’s role in angiogenesis.\
+  """,
+
+  """\
+  Used UV-Vis spectroscopy to test for quality and quantity of protein \
+  produced.\
+  """,
+
+  """\
+  Created and presented a poster for the Middlebury College research \
+  symposium.\
+  """
+
 ]
 [experiences.company]
 name = "Middlebury College"
@@ -84,11 +182,25 @@ department = "Back of House"
 position = "Kitchen Manager"
 website = "http://americanflatbread.com/restaurants/middlebury-vt/"
 start_date = 2010-06-01
-current = true
+end_date = 2018-03-01
+current = false
+display = ["web"]
 highlights = [
-  "Trained on all positions in the restaurant, both front and back of house. Proficient enough to smoothly manage 400 cover nights. Create and execute  catering menus for parties exceeding 100 individuals.\n",
-  "Design and oversee the creation of new menu items and weekly specials  alongside the head chef.\n",
-  "Manage the kitchen staff in the absence of the head chef.\n"
+  """\
+  Trained on all positions in the restaurant, both front and back of house. \
+  Proficient enough to smoothly manage 400 cover nights. Create and execute \
+  catering menus for parties exceeding 100 individuals.\
+  """,
+
+  """\
+  Design and oversee the creation of new menu items and weekly specials \
+  alongside the head chef.\
+  """,
+
+  """\
+  Manage the kitchen staff in the absence of the head chef.\
+  """
+
 ]
 [experiences.company]
 name = "American Flatbread"
@@ -126,61 +238,55 @@ keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "C"
+name = "Bash"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "Javascript"
+name = "JavaScript"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "HTML"
+name = "TypeScript"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "CSS"
+name = "Go"
 level = "intermediate"
 keywords = ""
 category = "Programming Langauges"
 
 [[skills]]
-name = "Backbone.js"
+name = "Sprint Boot"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "Node.js"
+name = "React"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "WebGL"
+name = "Spark"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "Flask"
+name = "Flink"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
 [[skills]]
-name = "Django"
-level = "intermediate"
-keywords = ""
-category = "Libraries & Frameworks"
-
-[[skills]]
-name = "jQuery"
+name = "Airflow"
 level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
@@ -192,7 +298,7 @@ keywords = ""
 category = "Operating Systems"
 
 [[skills]]
-name = "Mac OS X"
+name = "macOS"
 level = "intermediate"
 keywords = ""
 category = "Operating Systems"
@@ -204,22 +310,94 @@ keywords = ""
 category = "Operating Systems"
 
 [[skills]]
-name = "git"
+name = "Git"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
-name = "gcc"
+name = "Maven"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
 
 [[skills]]
-name = "make"
+name = "Buildkite"
 level = "intermediate"
 keywords = ""
-category = "Dev Tools"
+category = "Developer Tooling"
+
+[[skills]]
+name = "InfluxDB"
+level = "intermediate"
+keywords = ""
+category = "Developer Tooling"
+
+[[skills]]
+name = "Datadog"
+level = "intermediate"
+keywords = ""
+category = "Developer Tooling"
+
+[[skills]]
+name = "Grafana"
+level = "intermediate"
+keywords = ""
+category = "Developer Tooling"
+
+[[skills]]
+name = "Kibana"
+level = "intermediate"
+keywords = ""
+category = "Developer Tooling"
+
+[[skills]]
+name = "Google Cloud Platform"
+level = "intermediate"
+keywords = ""
+category = "Cloud Platforms"
+
+[[skills]]
+name = "Avro"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "Parquet"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "PostgreSQL"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "Aerospike"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "Google BigQuery"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "Google Cloud Storage"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
+
+[[skills]]
+name = "Kafka"
+level = "intermediate"
+keywords = ""
+category = "Data Storage"
 
 [[projects]]
 name = "Twender"
