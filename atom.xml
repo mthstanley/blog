@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Bits and Bytes</title>
+    <subtitle>Here lies the website of Matthew Stanley, professional nerd. You will also find his blog Bits and Bytes, in which he discusses his two passions, cooking and code. </subtitle>
+    <link href="https://mtstanley.dev/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://mtstanley.dev/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-07-14T00:00:00+00:00</updated>
+    <id>https://mtstanley.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Welcome to Bits and Bytes!</title>
+        <published>2017-07-14T00:00:00+00:00</published>
+        <updated>2017-07-14T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://mtstanley.dev/posts/welcome-to-bits-and-bytes/" type="text/html"/>
+        <id>https://mtstanley.dev/posts/welcome-to-bits-and-bytes/</id>
+        <content type="html">&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;imgs.xkcd.com&#x2F;comics&#x2F;recipes.png&quot; alt=&quot;Relevant xkcd.&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;what-is-this-place&quot;&gt;What is this Place?&lt;&#x2F;h1&gt;
+&lt;p&gt;Ever wanted to read a blog about both Food &lt;em&gt;and&lt;&#x2F;em&gt; Computer Science? Well look no further! Also, good for you for knowing &lt;em&gt;exactly&lt;&#x2F;em&gt; what you want. &lt;&#x2F;p&gt;
+&lt;p&gt;Now you can read a tutorial on how to set up a web server (like &lt;a href=&quot;https:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;&quot;&gt;nginx&lt;&#x2F;a&gt;) on your freshly provisioned &lt;a href=&quot;https:&#x2F;&#x2F;www.linode.com&#x2F;&quot;&gt;Linode&lt;&#x2F;a&gt; server, perhaps to serve up a slick website or blog generated with &lt;a href=&quot;https:&#x2F;&#x2F;jekyllrb.com&#x2F;&quot;&gt;Jekyll&lt;&#x2F;a&gt; like this fine establishment? Maybe afterwards you want to whip up and chow down on fantastic dumplings and admire your handy work? Now you can have it all! All under one URL.&lt;&#x2F;p&gt;
+&lt;p&gt;I&#x27;m &lt;em&gt;very&lt;&#x2F;em&gt; passionate about food and technology and so the topic of my posts (for the most part) will be about one or the other, and sometimes their intersection.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;why&quot;&gt;Why?&lt;&#x2F;h1&gt;
+&lt;p&gt;This blog will be personal, in that it will be a reflection of me, as I grow and learn so will it, a sort of &lt;strong&gt;extremely&lt;&#x2F;strong&gt; public diary. It is meant to be a conversation with myself, in a room where others are listening.&lt;&#x2F;p&gt;
+&lt;p&gt;I wanted to catalog my learning experiences, in part to help me digest and better understand the knowledge, and in part to pass on that hard won knowledge to others. &lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can&#x27;t explain it simply, you don&#x27;t understand it well enough.&lt;&#x2F;p&gt;
+&lt;p&gt;-- Possibly, Albert Einstein&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I also wanted to have a nice archive of tutorials and recipes to look back on, in the likely event that I forget them.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;stay-hungry&quot;&gt;Stay Hungry&lt;&#x2F;h1&gt;
+&lt;p&gt;Goodbye until next time, thanks for dropping by! If you decide to stick around enjoy the bits and bytes...&lt;&#x2F;p&gt;
+</content>
+    </entry>
+</feed>

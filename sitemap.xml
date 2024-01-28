@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://mtstanley.dev/</loc>
+    </url>
+    <url>
+        <loc>https://mtstanley.dev/about/</loc>
+    </url>
+    <url>
+        <loc>https://mtstanley.dev/posts/</loc>
+    </url>
+    <url>
+        <loc>https://mtstanley.dev/posts/welcome-to-bits-and-bytes/</loc>
+        <lastmod>2017-07-14</lastmod>
+    </url>
+    <url>
+        <loc>https://mtstanley.dev/projects/</loc>
+    </url>
+    <url>
+        <loc>https://mtstanley.dev/resume/</loc>
+    </url>
+</urlset>
