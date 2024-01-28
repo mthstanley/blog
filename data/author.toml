@@ -55,15 +55,16 @@ highlights = [
 
   """\
   Designed and implemented configuration-based ETL framework to generate \
-  foundational data assets at scale (using HDFS, Hive, Presto, Parquet, Spark \
-  and Airflow) for Wayfair's Machine Learning and Analytics platforms.\
+  standardized, foundational data assets at scale for Wayfair's Machine \
+  Learning and Analytics platforms, drastically reducing data sprawl.\
   """,
 
   """\
-  Led the engineering effort of multiple high-impact migrations for \
-  Wayfair's high-throughput event ingestion platform: from single to \
-  multi-datacenter architecture, from operating on on-premise infrastructure \
-  through hybrid cloud to fully on-boarded onto Google Cloud Platform.\
+  Led the engineering effort of multiple high-impact migrations for Wayfair's \
+  high-throughput event ingestion platform (from single to multi-datacenter \
+  architecture, from operating on on-premise infrastructure through hybrid \
+  cloud to fully on-boarded onto Google Cloud Platform), enabling \
+  datacenter-local processing with improved stability and decreased latency.\
   """,
 
   """\
@@ -74,9 +75,9 @@ highlights = [
   """,
 
   """\
-  Lead an agile team of 4 engineers working on the control plane systems \
-  for Wayfair's next generation streaming event ingestion and sourcing \
-  platform.\
+  Lead an agile team of 4 engineers working on the control plane systems for \
+  Wayfair's next generation streaming event ingestion and sourcing platform, \
+  focused on improving data agility at scale through a data mesh architecture. \
   """
 
 ]
