@@ -230,37 +230,37 @@ overall = 3.91
 name = "Python"
 level = "intermediate"
 keywords = ""
-category = "Programming Langauges"
+category = "Programming Languages"
 
 [[skills]]
 name = "Java"
 level = "intermediate"
 keywords = ""
-category = "Programming Langauges"
+category = "Programming Languages"
 
 [[skills]]
 name = "Bash"
 level = "intermediate"
 keywords = ""
-category = "Programming Langauges"
+category = "Programming Languages"
 
 [[skills]]
 name = "JavaScript"
 level = "intermediate"
 keywords = ""
-category = "Programming Langauges"
+category = "Programming Languages"
 
 [[skills]]
 name = "TypeScript"
 level = "intermediate"
 keywords = ""
-category = "Programming Langauges"
+category = "Programming Languages"
 
 [[skills]]
 name = "Go"
 level = "intermediate"
 keywords = ""
-category = "Programming Langauges"
+category = "Programming Languages"
 
 [[skills]]
 name = "Sprint Boot"
