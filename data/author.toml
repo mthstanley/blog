@@ -3,12 +3,10 @@ email = "stanley.t.matthew@gmail.com"
 description = "Senior Software Engineer"
 
 summary = """\
-Software Engineer with 5 years experience designing, building \
-and maintaining data platforms for event driven systems, specializing in (but \
-not limited to) JVM-based programming languages. Domain expert in customer \
-tracking for web-based applications. Currently leading a team of 4 building the \
-next generation event streaming platform at Wayfair. Passionate about developer \
-experience and velocity.\
+Software Engineer with 8+ years of experience architecting \
+enterprise-grade data platforms and a proven track record of driving \
+large-scale infrastructure and platform transformations through organizational \
+turbulence to deliver outsized business impact.\
 """
 
 phone = "+1 (802) 989-2201"
@@ -39,45 +37,69 @@ region = "Massachusetts"
   url = "https://linkedin.com/in/"
 
 [[experiences]]
+department = "Container Security Product Team"
+position = "Staff Software Engineer"
+website = "https://snyk.io/"
+start_date = 2025-05-06
+end_date = 2026-07-06
+current = false
+display = ["web", "pdf"]
+highlights = [
+  """\
+  Architected and led the UI/UX transformation for Snyk's container security \
+  product, introducing native primitives to optimize user workflows from \
+  discovery to remediation.\
+  """,
+
+  """\
+  Designed and evangelized standardized patterns aligned across multiple \
+  replatforming initiatives, from frontend down to data-layer, enabling \
+  scalable implementation for Snyk’s remaining product lines.\
+  """,
+
+  """\
+  Steered a team of 4 engineers through high tech debt and organizational \
+  restructuring, delivering a high-priority product milestone on schedule.\
+  """
+]
+[experiences.company]
+name = "Snyk"
+location = "Boston, MA"
+
+[[experiences]]
 department = "Data and Machine Learning Platforms"
 position = "Staff Software Engineer"
 website = "https://www.wayfair.com"
 start_date = 2018-04-09
-current = true
+end_date = 2025-05-05
+current = false
 display = ["web", "pdf"]
 highlights = [
   """\
-  Automated compaction of small files across Wayfair's on-premise HDFS \
-  cluster, optimizing file sizes to the cluster's block size, realizing a 98% \
-  reduction in file count and drastically improving the cluster's performance \
-  and life-expectancy.\
+  Automated HDFS file compaction, reducing small file counts by 98% to optimize \
+  block sizes and significantly extend cluster life expectancy.\
   """,
 
   """\
-  Designed and implemented configuration-based ETL framework to generate \
-  standardized, foundational data assets at scale for Wayfair's Machine \
-  Learning and Analytics platforms, drastically reducing data sprawl.\
+  Designed a configuration-based ETL framework to generate standardized, \
+  foundational data assets for ML and analytics platforms while eliminating \
+  data sprawl.\
   """,
 
   """\
-  Led the engineering effort of multiple high-impact migrations for Wayfair's \
-  high-throughput event ingestion platform (from single to multi-datacenter \
-  architecture, from operating on on-premise infrastructure through hybrid \
-  cloud to fully on-boarded onto Google Cloud Platform), enabling \
-  datacenter-local processing with improved stability and decreased latency.\
+  Led high-impact data platform migrations (on-prem -> hybrid -> enitrely on \
+  GCP), enabling multi-datacenter processing with lower latency and higher \
+  stability.\
   """,
 
   """\
-  Drove multiple cost saving initiatives across my team's platforms, \
-  including: optimizing automated Cloud Storage policies, tuning Google Dataproc \
-  cluster usage and consolidating duplicative processes, leading to $10MM+ \
-  annualized in reduced spending.\
+  Drove infrastructure cost-saving initiatives that slashed annualized spending \
+  by $10MM+ through optimized Cloud Storage policies and tuned Dataproc usage.\
   """,
 
   """\
-  Lead an agile team of 4 engineers working on the control plane systems for \
-  Wayfair's next generation streaming event ingestion and sourcing platform, \
-  focused on improving data agility at scale through a data mesh architecture. \
+  Led an agile team of 4 engineers transforming Wayfair's data platform into a \
+  data mesh focused on improving data quality & agility at scale.\
   """
 
 ]
@@ -292,23 +314,23 @@ level = "intermediate"
 keywords = ""
 category = "Libraries & Frameworks"
 
-[[skills]]
-name = "Unix"
-level = "intermediate"
-keywords = ""
-category = "Operating Systems"
-
-[[skills]]
-name = "macOS"
-level = "intermediate"
-keywords = ""
-category = "Operating Systems"
-
-[[skills]]
-name = "Linux (Arch, Fedora)"
-level = "intermediate"
-keywords = ""
-category = "Operating Systems"
+#[[skills]]
+#name = "Unix"
+#level = "intermediate"
+#keywords = ""
+#category = "Operating Systems"
+#
+#[[skills]]
+#name = "macOS"
+#level = "intermediate"
+#keywords = ""
+#category = "Operating Systems"
+#
+#[[skills]]
+#name = "Linux (Arch, Fedora)"
+#level = "intermediate"
+#keywords = ""
+#category = "Operating Systems"
 
 [[skills]]
 name = "Git"
@@ -348,6 +370,18 @@ category = "Developer Tooling"
 
 [[skills]]
 name = "Kibana"
+level = "intermediate"
+keywords = ""
+category = "Developer Tooling"
+
+[[skills]]
+name = "K8s"
+level = "intermediate"
+keywords = ""
+category = "Developer Tooling"
+
+[[skills]]
+name = "Terraform"
 level = "intermediate"
 keywords = ""
 category = "Developer Tooling"
