@@ -1,23 +1,14 @@
-{% import "macros.html" as macros %}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default(value='en') }}">
-
+<html lang="{{ page?.lang | default(value='en') }}">
     {% include "includes/head.html" %}
-
     <body>
-
         {% include "includes/header.html" %}
-
         <main class="page-content" aria-label="Content">
             <div class="wrapper">
                 {% block content %}
-
                 {% endblock content %}
             </div>
         </main>
-
         {% include "includes/footer.html" %}
-
     </body>
-
 </html>
