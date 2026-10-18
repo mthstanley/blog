@@ -1,15 +1,15 @@
 {% set author = load_data(path="data/author.toml") %}
 <footer class="site-footer">
     <div class="wrapper">
-        <h2 class="footer-heading">{{ config.title | escape }}</h2>
+        <h2 class="footer-heading">{{ config.title | escape_html }}</h2>
         <div class="footer-col-wrapper">
             <div class="footer-col footer-col-1">
                 <ul class="contact-list">
                     <li>
                         {% if author.name %}
-                            {{ author.name | escape }}
+                            {{ author.name | escape_html }}
                         {% else %}
-                            {{ config.title | escape }}
+                            {{ config.title | escape_html }}
                         {% endif %}
                     </li>
                     {% if author.email %}
@@ -44,7 +44,7 @@
                 </ul>
             </div>
             <div class="footer-col footer-col-3">
-                <p>{{ config.description | escape }}</p>
+                <p>{{ config.description | escape_html }}</p>
             </div>
         </div>
     </div>

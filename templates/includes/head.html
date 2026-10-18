@@ -4,19 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         {% if page?.title %}
-            {{ page.title | escape }}
+            {{ page.title | escape_html }}
         {% else %}
-            {{ config.title | escape }}
+            {{ config.title | escape_html }}
         {% endif %}
     </title>
     <meta name="description"
-          content="{{ page?.description | default(value=config.description, boolean=true) | striptags | truncate(length=160) | escape }}">
+          content="{{ page?.description | default(value=config.description, boolean=true) | striptags | truncate(length=160) | escape_html }}">
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
     <link rel="canonical"
           href="{{ page?.path | default(value=section?.path) }}">
     <link rel="alternate"
           type="application/rss+xml"
-          title="{{ config.title | escape }}"
+          title="{{ config.title | escape_html }}"
           href="{{ get_url(path="/feed.xml") }}">
     <link rel="stylesheet"
           href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
