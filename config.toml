@@ -15,22 +15,19 @@ compile_sass = true
 build_search_index = false
 
 # When set to "true", a feed is automatically generated.
-generate_feed = true
+generate_feeds = true
 
 # The filename to use for the feed. Used as the template filename, too.
 # Defaults to "atom.xml", which has a built-in template that renders an Atom 1.0 feed.
 # There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
-feed_filename = "atom.xml"
+feed_filenames = ["atom.xml"]
 
 # Whether to remove date prefixes for page path slugs.
 # For example, content/posts/2016-10-08_a-post-with-dates.md => posts/a-post-with-dates
 # When true, content/posts/2016-10-08_a-post-with-dates.md => posts/2016-10-08-a-post-with-dates
+[slugify]
+paths = "on"
 paths_keep_dates = true
-
-[markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
 
 [extra]
 # Put all your custom variables here

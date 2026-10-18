@@ -1,0 +1,4 @@
+{%- component mailto_author(text) -%}
+{%- set author = load_data(path="data/author.toml") -%}
+[{{ text }}](mailto:{{ author.email }})
+{%- endcomponent mailto_author -%}

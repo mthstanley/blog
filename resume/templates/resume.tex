@@ -30,7 +30,7 @@
 {%- set current_experiences = experiences | filter(attribute="current", value=true) | sort(attribute="start_date") | reverse -%}
 {% for experience in current_experiences %}
 {%- if experience.display is not containing("pdf") -%}{%- continue -%}{%- endif -%}
-{% if loop.first or current_experiences | map(attribute="company.name") | nth(n=loop.index - 1) != experience.company.name -%}
+{% if loop.first or current_experiences | map(attribute="company.name") | nth(n=loop.index - 2) != experience.company.name -%}
 {% raw %}\locationsubsection{{% endraw %}{{ experience.company.name }}{% raw %}}{{% endraw %}{{ experience.company.location }}{% raw %}}{% endraw %}
 {%- endif %}
 \expblock
@@ -45,7 +45,7 @@
 {%- set past_experiences = experiences | filter(attribute="current", value=false) | sort(attribute="end_date") | reverse -%}
 {%- for experience in past_experiences %}
 {%- if experience.display is not containing("pdf") -%}{%- continue -%}{%- endif -%}
-{% if loop.first and current_experiences | map(attribute="company.name") | last != experience.company.name or past_experiences | map(attribute="company.name") | nth(n=loop.index - 1) != experience.company.name -%}
+{% if loop.first and current_experiences | map(attribute="company.name") | last != experience.company.name or past_experiences | map(attribute="company.name") | nth(n=loop.index - 2) != experience.company.name -%}
 {% raw %}\locationsubsection{{% endraw %}{{ experience.company.name }}{% raw %}}{{% endraw %}{{ experience.company.location }}{% raw %}}{% endraw %}
 {%- endif %}
 \expblock
