@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Bits and Bytes</title>
+    <subtitle>Here lies the website of Matthew Stanley, professional nerd. You will also find his blog Bits and Bytes, in which he discusses his two passions, cooking and code. </subtitle>
+    <link rel="self" type="application/atom+xml" href="https://mtstanley.dev/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mtstanley.dev/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-07-14T00:00:00+00:00</updated>
+    <id>https://mtstanley.dev/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Welcome to Bits and Bytes!</title>
+        <published>2017-07-14T00:00:00+00:00</published>
+        <updated>2017-07-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mtstanley.dev/posts/2017-07-14-welcome-to-bits-and-bytes/"/>
+        <id>https://mtstanley.dev/posts/2017-07-14-welcome-to-bits-and-bytes/</id>
+        
+        <content type="html" xml:base="https://mtstanley.dev/posts/2017-07-14-welcome-to-bits-and-bytes/">&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/recipes.png&quot; alt=&quot;Relevant xkcd.&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;what-is-this-place&quot;&gt;What is this Place?&lt;/h1&gt;
+&lt;p&gt;Ever wanted to read a blog about both Food &lt;em&gt;and&lt;/em&gt; Computer Science? Well look no further! Also, good for you for knowing &lt;em&gt;exactly&lt;/em&gt; what you want.&lt;/p&gt;
+&lt;p&gt;Now you can read a tutorial on how to set up a web server (like &lt;a rel=&quot;external&quot; href=&quot;https://nginx.org/en/&quot;&gt;nginx&lt;/a&gt;) on your freshly provisioned &lt;a rel=&quot;external&quot; href=&quot;https://www.linode.com/&quot;&gt;Linode&lt;/a&gt; server, perhaps to serve up a slick website or blog generated with &lt;a rel=&quot;external&quot; href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; like this fine establishment? Maybe afterwards you want to whip up and chow down on fantastic dumplings and admire your handy work? Now you can have it all! All under one URL.&lt;/p&gt;
+&lt;p&gt;I&#39;m &lt;em&gt;very&lt;/em&gt; passionate about food and technology and so the topic of my posts (for the most part) will be about one or the other, and sometimes their intersection.&lt;/p&gt;
+&lt;h1 id=&quot;why&quot;&gt;Why?&lt;/h1&gt;
+&lt;p&gt;This blog will be personal, in that it will be a reflection of me, as I grow and learn so will it, a sort of &lt;strong&gt;extremely&lt;/strong&gt; public diary. It is meant to be a conversation with myself, in a room where others are listening.&lt;/p&gt;
+&lt;p&gt;I wanted to catalog my learning experiences, in part to help me digest and better understand the knowledge, and in part to pass on that hard won knowledge to others.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you can&#39;t explain it simply, you don&#39;t understand it well enough.&lt;/p&gt;
+&lt;p&gt;-- Possibly, Albert Einstein&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I also wanted to have a nice archive of tutorials and recipes to look back on, in the likely event that I forget them.&lt;/p&gt;
+&lt;h1 id=&quot;stay-hungry&quot;&gt;Stay Hungry&lt;/h1&gt;
+&lt;p&gt;Goodbye until next time, thanks for dropping by! If you decide to stick around enjoy the bits and bytes...&lt;/p&gt;
+</content>
+        
+    </entry>
+</feed>
